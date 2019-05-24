@@ -30,7 +30,7 @@ Crear los folders Configuration, Presenter e Interfaces.
 * ### Configuration xmls
 Crear **unity.config** en folder Configuration y agregar
 
-```
+```c#
 <?xml version="1.0" encoding="utf-8"?>
 <unity xmlns="http://schemas.microsoft.com/practices/2010/unity">
   <container>
@@ -42,7 +42,7 @@ Crear **unity.config** en folder Configuration y agregar
 
 En **Web.config** agregar
 
-```
+```c#
   <configSections>
     	<section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Unity.Configuration" />
     
@@ -53,7 +53,7 @@ En **Web.config** agregar
  * ### Clases RouteMapper y BasePage
   
  #### Route Mapper
-  ```
+  ```c#
   using DotNetNuke.Web.Api;
 using System;
 using System.Collections.Generic;
@@ -99,7 +99,7 @@ namespace MvpPractica
   ```
   
    #### Base Page
-  ```
+  ```c#
   using System;  
 	using System.Collections.Generic;  
 	using System.Linq;  
