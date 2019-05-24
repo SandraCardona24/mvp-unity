@@ -13,13 +13,13 @@ Crear los folders Configuration, Presenter e Interfaces.
 
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/folders.png?raw=true)
 
-### Instalar con Nugget Manager
+* ### Instalar con Nugget Manager
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/2.png?raw=true)
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/3.png?raw=true)
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/4.png?raw=true)
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/5.png?raw=true)
 
-### Configuration xmls
+* ### Configuration xmls
 Crear **unity.config** en folder Configuration y agregar
 
 ```
@@ -42,9 +42,9 @@ En **Web.config** agregar
   <unity configSource="Configuration\unity.config" />
   ```
   
-  ### Clases RouteMapper y BasePage
+ * ### Clases RouteMapper y BasePage
   
-  #### Route Mapper
+ * #### Route Mapper
   ```
   using DotNetNuke.Web.Api;
 using System;
@@ -90,7 +90,7 @@ namespace MvpPractica
     }
   ```
   
-  #### Base Page
+  * #### Base Page
   ```
   using System;  
 	using System.Collections.Generic;  
