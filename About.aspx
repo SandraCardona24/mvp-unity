@@ -5,6 +5,10 @@
     <h3>Your application description page.</h3>
     <p>Use this area to provide additional information.</p>
     <p>
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+    </p>
+    <p>
         <asp:Label ID="LabelMensaje" runat="server" Text="Label"></asp:Label>
     </p>
 </asp:Content>

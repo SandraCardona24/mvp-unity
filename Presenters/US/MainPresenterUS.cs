@@ -10,7 +10,7 @@ namespace MvpPractica.Presenters.US
     {
         public override void Saludar()
         {
-            this._view.LabelSaludo = "Helloooooooooo";
+           // this._view.LabelSaludo = "Helloooooooooo";
         }
     }
 }

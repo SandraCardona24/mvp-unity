@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI.WebControls;
 
 namespace MvpPractica.Interfaces
 {
-    public interface IMainView
+    public class IEmpleadosView
     {
-       
-
-        GridView UserGridView { set; get; }
-
     }
 }

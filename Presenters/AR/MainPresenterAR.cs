@@ -10,7 +10,7 @@ namespace MvpPractica.Presenters.AR
     {
         public override void Saludar()
         {
-            this._view.LabelSaludo = "Hola Bienvenido";
+            //this._view.LabelSaludo = "Hola Bienvenido";
         }
     }
 }
