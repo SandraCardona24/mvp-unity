@@ -1,7 +1,11 @@
 # Configurar MVP con Unity .NET
 Model view presenter pattern with Unity framework(Independency Injection)
+
 [Unity Framework](https://www.c-sharpcorner.com/UploadFile/dhananjaycoder/unity-framework/)
+
 [Inyeccion de dependencias](https://thatcsharpguy.com/posts/la-inyeccion-de-dependencias/)
+
+[What are MVP and MVC and what is the difference?](https://stackoverflow.com/questions/2056/what-are-mvp-and-mvc-and-what-is-the-difference)
 
 ### Folders
 
