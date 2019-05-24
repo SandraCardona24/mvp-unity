@@ -14,6 +14,14 @@ Crear los folders Configuration, Presenter e Interfaces.
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/folders.png?raw=true)
 
 * ### Instalar con Nugget Manager
+
+| Package       | version           
+| ------------- |:-------------:|
+|  Unity.Abastractions | 4.1.3.0 |
+| Unity.Configuration      | 5.10.0.0      | 
+| Unity.Container | 5.10.3.0      |   
+| DotNetNuke.Web | 7.4.2      |
+
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/2.png?raw=true)
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/3.png?raw=true)
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/4.png?raw=true)
@@ -44,7 +52,7 @@ En **Web.config** agregar
   
  * ### Clases RouteMapper y BasePage
   
- * #### Route Mapper
+ #### Route Mapper
   ```
   using DotNetNuke.Web.Api;
 using System;
@@ -90,7 +98,7 @@ namespace MvpPractica
     }
   ```
   
-  * #### Base Page
+   #### Base Page
   ```
   using System;  
 	using System.Collections.Generic;  
