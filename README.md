@@ -11,7 +11,8 @@ Model view presenter pattern with Unity framework (Independency Injection)
 
 Crear los folders Configuration, Presenter e Interfaces.
 
-![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/folders.png?raw=true)
+
+![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/1.png?raw=true)
 
 * ### Instalar con Nugget Manager
 
@@ -22,7 +23,6 @@ Crear los folders Configuration, Presenter e Interfaces.
 | Unity.Container | 5.10.3.0      |   
 | DotNetNuke.Web | 7.4.2      |
 
-![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/1.png?raw=true)
 
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/3.png?raw=true)
 
@@ -37,11 +37,13 @@ Crear **unity.config** en folder Configuration y agregar
 ```c#
 <?xml version="1.0" encoding="utf-8"?>
 <unity xmlns="http://schemas.microsoft.com/practices/2010/unity">
-  <container>
-    <register type="MvpPractica.Interfaces.IMainPresenter, MvpPractica" mapTo="MvpPractica.Presenters.AR.MainPresenterAR, MvpPractica"/>
-       <!-- <register type="MvpPractica.Interfaces.IMainPresenter, MvpPractica" mapTo="MvpPractica.Presenters.US.MainPresenterUS, MvpPractica"/> -->
-    </container>
-</unit
+  <container>    
+    <register type="MvpPractica.Interfaces.IPresenterTabla, MvpPractica" mapTo="MvpPractica.Presenters.AR.PresenterTablaAR, MvpPractica"/>
+    <!-- <register type="MvpPractica.Interfaces.IPresenterTabla, MvpPractica" mapTo="MvpPractica.Presenters.AR.PresenterTablaAR, MvpPractica"/> -->
+
+
+  </container>
+</unity>
 ```
 
 En **Web.config** agregar
@@ -158,49 +160,56 @@ public interface IMainView
 ```
 
 ```c#
-public interface IPresenterEmpleados
-{
-	void SetView(IMainView view);
-	void CargarTabla();
-	void ToggleTabla();
-}
+    public interface IPresenterTabla
+    {
+        void SetView(IMainView view);
+        void CargarTablaEmpleados();
+        void CargarTablaEmpresas();    
+    }
 ```
 
 ### __Presenters__
 
 ```c#
 //Clase abstracta
-public abstract class PresenterEmpleados : IPresenterEmpleados
-{
-	public IMainView _view;
+    public abstract class PresenterTabla : IPresenterTabla
+    {
+        public IMainView _view;
 
-	public abstract void CargarTabla();
-	public abstract void ToggleTabla();
+        public abstract void CargarTablaEmpleados();
 
-	public void SetView(IMainView view)
-	{
- 	   this._view = view;
-	}
-}
+        public abstract void CargarTablaEmpresas();      
+
+        public void SetView(IMainView view)
+        {
+            this._view = view;
+        }      
+    }
 
 ```
 
 ```c#
    
-public class PresentadorEmpleadosAR : PresenterEmpleados
-{
-	public override void CargarTabla(){
-	    using(EmpleadosAREntities1 db = new EmpleadosAREntities1())
+
+public class PresenterTablaAR : PresenterTabla    {
+
+	public override void CargarTablaEmpleados()
+	{
+	    using (BDArgentinaEntities bd = new BDArgentinaEntities())
 	    {
-		this._view.UserGridView.DataSource = db.Empleadoes.ToList();
+		this._view.UserGridView.DataSource = bd.Empleadoes.ToList();
 		this._view.UserGridView.DataBind();
 	    }
 	}
-	
-    	public override void ToggleTabla()
-        {
-            this._view.UserGridView.Visible = !this._view.UserGridView.Visible;
-        }
+
+	public override void CargarTablaEmpresas()
+	{
+	    using (BDArgentinaEntities bd = new BDArgentinaEntities())
+	    {
+		this._view.UserGridView.DataSource = bd.Empresas.ToList();
+		this._view.UserGridView.DataBind();
+	    }
+	}
 } 
 ```
 
@@ -208,19 +217,30 @@ public class PresentadorEmpleadosAR : PresenterEmpleados
 Agregamos un DataGridView en About.aspx
 
 ```c#
-public partial class About : BasePage<About>, IMainView
+    public partial class About : BasePage<About>, IMainView
     {
-        [Dependency]       
-	public IPresenterEmpleados _presenterEmpleados { get; set; }       
-        public GridView UserGridView{ get => GridView1; set => GridView1 = value; }
-        protected void Page_Load(object sender, EventArgs e)
-        {            
-            _presenterEmpleados.SetView(this);            
-            _presenterEmpleados.CargarTabla();
+        [Dependency]
+       
+        public IPresenterTabla _presenterTabla { get; set; }       
+       public GridView UserGridView{ get => GridView1; set => GridView1 = value; }
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            _presenterTabla.SetView(this);           
+          
+        }
+
+        protected void ButtonEmpleados_Click(object sender, EventArgs e)
+        {
+            _presenterTabla.CargarTablaEmpleados();
+        }
+
+        protected void ButtonEmpresas_Click(object sender, EventArgs e)
+        {
+            _presenterTabla.CargarTablaEmpresas();
         }
     }
-}
 ```
 
 
