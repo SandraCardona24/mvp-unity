@@ -139,7 +139,10 @@ namespace MvpPractica
   ```
   
   ## Ejemplo básico
-  Importar con [EntityFramework](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview)  la base de datos.
+  Cargar la BD con EF.
+  
+  [Que es EntityFramework?](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview)   
+  [Crear o updatear  edmx  con EntityFramework datamodel](https://www.c-sharpcorner.com/article/create-and-update-an-edmx-file-using-entity-framework-data-model-in-visual-stud/)
   
   ### Interfaces.
   ```c#
