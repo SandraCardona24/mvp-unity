@@ -159,8 +159,8 @@ namespace MvpPractica
   Crear dos bases de datos una para AR y otra para US con las tablas Empleado y Empresa
   Cargar las bases de datos con EnttityFramework.
   
-  [Que es EntityFramework?](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview)   
-  [Crear o updatear  edmx  con EntityFramework datamodel](https://www.c-sharpcorner.com/article/create-and-update-an-edmx-file-using-entity-framework-data-model-in-visual-stud/)
+  - [Que es EntityFramework?](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview)   
+  - [Crear o updatear  edmx  con EntityFramework datamodel](https://www.c-sharpcorner.com/article/create-and-update-an-edmx-file-using-entity-framework-data-model-in-visual-stud/)
   
   ![imagen](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/bd.png)
   
@@ -184,7 +184,7 @@ public interface IMainView
     }
 ```
 
-### __Presenters__
+### Presenters.
 
 ```c#
 //Clase abstracta
@@ -229,7 +229,7 @@ public class PresenterTablaAR : PresenterTabla    {
 } 
 ```
 
-### Vista
+### Vista.
 Agregamos un DataGridView en About.aspx
 
 ```c#
