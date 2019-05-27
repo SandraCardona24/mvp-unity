@@ -33,7 +33,11 @@ Crear los folders Configuration, Presenter e Interfaces.
 
 * ### Configuration xmls
 Crear **unity.config** en folder Configuration y agregar
-
+estructura del tipo
+```c#
+ <register type="UBICACION DE LA INTERFAZ, NOMBRE PROYECTO " mapTo="UBICACION CLASE CONCRETA, NOMBRE PROYECTO/>
+ ```
+ 
 ```c#
 <?xml version="1.0" encoding="utf-8"?>
 <unity xmlns="http://schemas.microsoft.com/practices/2010/unity">
@@ -142,12 +146,14 @@ namespace MvpPractica
   
   ## Ejemplo básico
   Crear dos bases de datos una para AR y otra para US con las tablas Empleado y Empresa
-  Cargar las bases de dato con EnttityFramework.
-  
-  ![imagen](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/bd.png)
+  Cargar las bases de datos con EnttityFramework.
   
   [Que es EntityFramework?](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview)   
   [Crear o updatear  edmx  con EntityFramework datamodel](https://www.c-sharpcorner.com/article/create-and-update-an-edmx-file-using-entity-framework-data-model-in-visual-stud/)
+  
+  ![imagen](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/bd.png)
+  
+
   
   ### Interfaces.
   ```c#
