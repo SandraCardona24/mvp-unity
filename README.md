@@ -137,3 +137,80 @@ namespace MvpPractica
 	    }  
 	}  
   ```
+  
+  ## Ejemplo básico
+  Importar con [EntityFramework](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview)  la base de datos.
+  
+  ### Interfaces.
+  ```c#
+public interface IMainView
+{   
+	GridView UserGridView { set; get; }
+}
+
+```
+
+```c#
+public interface IPresenterEmpleados
+{
+	void SetView(IMainView view);
+	void CargarTabla();
+}
+```
+
+### __Presenters__
+
+```c#
+//Clase abstracta
+public abstract class PresenterEmpleados : IPresenterEmpleados
+{
+	public IMainView _view;
+
+	public abstract void CargarTabla();
+
+
+	public void SetView(IMainView view)
+	{
+ 	   this._view = view;
+	}
+}
+
+```
+
+```c#
+   
+public class PresentadorEmpleadosAR : PresenterEmpleados
+{
+	public override void CargarTabla(){
+	    using(EmpleadosAREntities1 db = new EmpleadosAREntities1())
+	    {
+		this._view.UserGridView.DataSource = db.Empleadoes.ToList();
+		this._view.UserGridView.DataBind();
+	    }
+	}
+} 
+```
+
+### Vista
+Agregamos un DataGridView en About.aspx
+
+```c#
+public partial class About : BasePage<About>, IMainView
+    {
+        [Dependency]       
+	public IPresenterEmpleados _presenterEmpleados { get; set; }       
+        public GridView UserGridView{ get => GridView1; set => GridView1 = value; }
+        protected void Page_Load(object sender, EventArgs e)
+        {            
+            _presenterEmpleados.SetView(this);            
+            _presenterEmpleados.CargarTabla();
+
+        }
+    }
+}
+```
+
+
+
+
+  
