@@ -20,7 +20,7 @@
 
 ### Estructura del proyecto <a name="estructura"></a>
 
-Crear los folders Configuration, Presenter e Interfaces.
+Crear un proyecto WebForms y agregar los folders Configuration, Presenter e Interfaces.
 
 
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/1.png?raw=true)
