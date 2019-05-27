@@ -54,7 +54,7 @@ estructura del tipo
 <unity xmlns="http://schemas.microsoft.com/practices/2010/unity">
   <container>    
     <register type="MvpPractica.Interfaces.IPresenterTabla, MvpPractica" mapTo="MvpPractica.Presenters.AR.PresenterTablaAR, MvpPractica"/>
-    <!-- <register type="MvpPractica.Interfaces.IPresenterTabla, MvpPractica" mapTo="MvpPractica.Presenters.AR.PresenterTablaAR, MvpPractica"/> -->
+    <!-- <register type="MvpPractica.Interfaces.IPresenterTabla, MvpPractica" mapTo="MvpPractica.Presenters.US.PresenterTablaUS, MvpPractica"/> -->
   </container>
 </unity>
 ```
