@@ -10,5 +10,7 @@ namespace MvpPractica.Interfaces
         void SetView(IMainView view);
         void CargarTabla();
 
+        void ToggleTabla();
+
     }
 }

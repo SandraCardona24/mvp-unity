@@ -9,6 +9,9 @@
         </asp:GridView>
     </p>
     <p>
+        <asp:Button ID="ButtonMostrar" runat="server" OnClick="Button1_Click" Text="MostrarTabla" />
+    </p>
+    <p>
         <asp:Label ID="LabelMensaje" runat="server" Text="Label"></asp:Label>
     </p>
 </asp:Content>

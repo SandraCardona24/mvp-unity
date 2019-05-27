@@ -17,5 +17,8 @@ namespace MvpPractica.Presenters.Abstract
         {
             this._view = view;
         }
+
+        public abstract void ToggleTabla();
+       
     }
 }

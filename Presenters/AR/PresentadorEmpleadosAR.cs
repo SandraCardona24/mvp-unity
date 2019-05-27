@@ -18,5 +18,10 @@ namespace MvpPractica.Presenters.AR
             }
             
         }
+
+        public override void ToggleTabla()
+        {
+            this._view.UserGridView.Visible = !this._view.UserGridView.Visible;
+        }
     }
 }
