@@ -13,20 +13,24 @@ namespace MvpPractica
     {
         [Dependency]
        
-        public IPresenterEmpleados _presenterEmpleados { get; set; }       
+        public IPresenterTabla _presenterTabla { get; set; }       
        public GridView UserGridView{ get => GridView1; set => GridView1 = value; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            _presenterEmpleados.SetView(this);            
-            _presenterEmpleados.CargarTabla();
 
+            _presenterTabla.SetView(this);           
+          
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void ButtonEmpleados_Click(object sender, EventArgs e)
         {
-            _presenterEmpleados.ToggleTabla();
+            _presenterTabla.CargarTablaEmpleados();
+        }
+
+        protected void ButtonEmpresas_Click(object sender, EventArgs e)
+        {
+            _presenterTabla.CargarTablaEmpresas();
         }
     }
 }
