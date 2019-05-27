@@ -211,6 +211,8 @@ public class PresenterTablaAR : PresenterTabla    {
 
 	public override void CargarTablaEmpleados()
 	{
+	   //En PresenterTablaUS cambia por 
+	   // using (BDEEUUEntities bd = new BDEEUUEntities())
 	    using (BDArgentinaEntities bd = new BDArgentinaEntities())
 	    {
 		this._view.UserGridView.DataSource = bd.Empleadoes.ToList();
