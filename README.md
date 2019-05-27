@@ -1,5 +1,5 @@
 # Configurar MVP con Unity .NET
-Model view presenter pattern with Unity framework(Independency Injection)
+Model view presenter pattern with Unity framework (Independency Injection)
 
 [Unity Framework](https://www.c-sharpcorner.com/UploadFile/dhananjaycoder/unity-framework/)
 
@@ -155,6 +155,7 @@ public interface IPresenterEmpleados
 {
 	void SetView(IMainView view);
 	void CargarTabla();
+	void ToggleTabla();
 }
 ```
 
@@ -167,7 +168,7 @@ public abstract class PresenterEmpleados : IPresenterEmpleados
 	public IMainView _view;
 
 	public abstract void CargarTabla();
-
+	public abstract void ToggleTabla();
 
 	public void SetView(IMainView view)
 	{
@@ -188,6 +189,11 @@ public class PresentadorEmpleadosAR : PresenterEmpleados
 		this._view.UserGridView.DataBind();
 	    }
 	}
+	
+    	public override void ToggleTabla()
+        {
+            this._view.UserGridView.Visible = !this._view.UserGridView.Visible;
+        }
 } 
 ```
 
