@@ -11,6 +11,7 @@ namespace MvpPractica.Interfaces
         void CargarTablaEmpleados();
         void CargarTablaEmpresas();
         
+        
 
     }
 }

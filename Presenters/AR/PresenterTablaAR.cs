@@ -14,6 +14,7 @@ namespace MvpPractica.Presenters.AR
         {
             using (BDArgentinaEntities bd = new BDArgentinaEntities())
             {
+                this._view.LabelTabla = "Empleados de Argentina";
                 this._view.UserGridView.DataSource = bd.Empleadoes.ToList();
                 this._view.UserGridView.DataBind();
             }
@@ -23,6 +24,7 @@ namespace MvpPractica.Presenters.AR
         {
             using (BDArgentinaEntities bd = new BDArgentinaEntities())
             {
+                this._view.LabelTabla = "Empresas de EEUU";
                 this._view.UserGridView.DataSource = bd.Empresas.ToList();
                 this._view.UserGridView.DataBind();
             }

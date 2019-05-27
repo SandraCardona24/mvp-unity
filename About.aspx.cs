@@ -15,6 +15,7 @@ namespace MvpPractica
        
         public IPresenterTabla _presenterTabla { get; set; }       
        public GridView UserGridView{ get => GridView1; set => GridView1 = value; }
+        public string LabelTabla { get => LabelMensaje.Text; set => LabelMensaje.Text = value; }
 
         protected void Page_Load(object sender, EventArgs e)
         {

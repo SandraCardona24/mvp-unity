@@ -11,6 +11,7 @@ namespace MvpPractica.Interfaces
        
 
         GridView UserGridView { set; get; }
+        string LabelTabla { set; get; }
 
     }
 }
