@@ -156,8 +156,8 @@ namespace MvpPractica
   ```
   
   ## Ejemplo básico <a name="ejemplo"></a>
-  Crear dos bases de datos una para AR y otra para US con las tablas Empleado y Empresa
-  Cargar las bases de datos con EnttityFramework.
+  Crear dos bases de datos una para AR y otra para US con las tablas Empleado y Empresa. 
+  Cargar las bases de datos con EntityFramework.
   
   - [Que es EntityFramework?](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview)   
   - [Crear o updatear  edmx  con EntityFramework datamodel](https://www.c-sharpcorner.com/article/create-and-update-an-edmx-file-using-entity-framework-data-model-in-visual-stud/)
