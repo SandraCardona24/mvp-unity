@@ -1,5 +1,5 @@
 # Configurar MVP con Unity .NET
-Model view presenter pattern with Unity framework (Independency Injection)
+#### Model view presenter pattern with Unity framework (Independency Injection)
 
 [Unity Framework](https://www.c-sharpcorner.com/UploadFile/dhananjaycoder/unity-framework/)
 
@@ -40,8 +40,6 @@ Crear **unity.config** en folder Configuration y agregar
   <container>    
     <register type="MvpPractica.Interfaces.IPresenterTabla, MvpPractica" mapTo="MvpPractica.Presenters.AR.PresenterTablaAR, MvpPractica"/>
     <!-- <register type="MvpPractica.Interfaces.IPresenterTabla, MvpPractica" mapTo="MvpPractica.Presenters.AR.PresenterTablaAR, MvpPractica"/> -->
-
-
   </container>
 </unity>
 ```
@@ -50,8 +48,7 @@ En **Web.config** agregar
 
 ```c#
   <configSections>
-    	<section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Unity.Configuration" />
-    
+    	<section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Unity.Configuration" />    
   </configSections>
   <unity configSource="Configuration\unity.config" />
   ```
@@ -70,8 +67,7 @@ using MvpPractica.Interfaces;
 using Microsoft.Practices.Unity.Configuration;
 
 namespace MvpPractica
-{ 
-    
+{     
         public class RouteMapper : IServiceRouteMapper, IContainerAccessor
         {
             public static IUnityContainer Container { get; private set; }
@@ -145,7 +141,10 @@ namespace MvpPractica
   ```
   
   ## Ejemplo básico
-  Cargar la BD con EF.
+  Crear dos bases de datos una para AR y otra para US con las tablas Empleado y Empresa
+  Cargar las bases de dato con EnttityFramework.
+  
+  ![imagen](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/bd.png)
   
   [Que es EntityFramework?](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/overview)   
   [Crear o updatear  edmx  con EntityFramework datamodel](https://www.c-sharpcorner.com/article/create-and-update-an-edmx-file-using-entity-framework-data-model-in-visual-stud/)
