@@ -170,6 +170,7 @@ namespace MvpPractica
   ```c#
 public interface IMainView
 {   
+	string LabelTabla { set; get; }
 	GridView UserGridView { set; get; }
 }
 
@@ -215,6 +216,7 @@ public class PresenterTablaAR : PresenterTabla    {
 	   // using (BDEEUUEntities bd = new BDEEUUEntities())
 	    using (BDArgentinaEntities bd = new BDArgentinaEntities())
 	    {
+	   	this._view.LabelTabla = "Empleados de Argentina";
 		this._view.UserGridView.DataSource = bd.Empleadoes.ToList();
 		this._view.UserGridView.DataBind();
 	    }
@@ -224,6 +226,7 @@ public class PresenterTablaAR : PresenterTabla    {
 	{
 	    using (BDArgentinaEntities bd = new BDArgentinaEntities())
 	    {
+	   	this._view.LabelTabla = "Empresas de Argentina";
 		this._view.UserGridView.DataSource = bd.Empresas.ToList();
 		this._view.UserGridView.DataBind();
 	    }
@@ -239,8 +242,9 @@ Agregamos un DataGridView en About.aspx
     {
         [Dependency]
        
-        public IPresenterTabla _presenterTabla { get; set; }       
+       public IPresenterTabla _presenterTabla { get; set; }       
        public GridView UserGridView{ get => GridView1; set => GridView1 = value; }
+       public string LabelTabla { get => LabelMensaje.Text; set => LabelMensaje.Text = value; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
