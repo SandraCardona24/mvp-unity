@@ -19,9 +19,6 @@
 
 
 
-### Estructura del proyecto <a name="estructura"></a>
-
-Crear un proyecto WebForms y agregar los folders Configuration, Presenter e Interfaces.
 
 
 ### Diagramas. <a name="diagramas"></a>
@@ -30,6 +27,9 @@ Crear un proyecto WebForms y agregar los folders Configuration, Presenter e Inte
 #### Diagrama de secuencia
 ![secuencia](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/image_thumb%5B2%5D.png?raw=true)
   
+### Estructura del proyecto <a name="estructura"></a>
+
+Crear un proyecto WebForms y agregar los folders Configuration, Presenter e Interfaces.
 
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/1.png?raw=true)
 
