@@ -98,9 +98,7 @@ namespace MvpPractica
             public void RegisterRoutes(IMapRoute mapRouteManager)
             {
                 //seteo ioC
-                CreateContainer();
-
-                //mapRouteManager.MapHttpRoute("Dnn.Solicitudes", "default", "{controller}/{action}", new[] { "DirecTV.SDSNET.Dnn.Solicitudes" });
+                CreateContainer();               
             }
 
             public static void CreateContainer()
