@@ -11,6 +11,7 @@
 ## **Indice**
 
 - [Estructura del proyecto](#estructura)
+- [Diagramas](#diagramas)
 - [Instalacion de packages](#instalar)
 - [Configuraciones](#configuraciones)
 - [Route Mapper y BasePage](#route)
@@ -22,6 +23,13 @@
 
 Crear un proyecto WebForms y agregar los folders Configuration, Presenter e Interfaces.
 
+
+### Diagramas. <a name="diagramas"></a>
+#### Diagrama de clases
+![clases](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/uml.png?raw=true)
+#### Diagrama de secuencia
+![secuencia](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/image_thumb%5B2%5D.png?raw=true)
+  
 
 ![imagen1](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/1.png?raw=true)
 
