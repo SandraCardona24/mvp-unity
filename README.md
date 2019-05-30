@@ -24,7 +24,7 @@
 ### Diagramas. <a name="diagramas"></a>
 #### Diagrama de clases
 ![clases](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/uml.png?raw=true)
-#### Diagrama de secuencia
+#### Diagrama de secuencia (Otro ejemplo)
 ![secuencia](https://github.com/diaznicolasandres1/mvp-unity/blob/master/fotos-readme/image_thumb%5B2%5D.png?raw=true)
   
 ### Estructura del proyecto <a name="estructura"></a>
